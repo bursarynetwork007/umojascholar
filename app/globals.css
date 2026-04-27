@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #FAF6EF;
+    color: #1E2D1A;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background-color: #FAF6EF;
+  }
+  h1, h2, h3 {
+    font-family: "DM Serif Display", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .kente-stripe {
+    background: repeating-linear-gradient(
+      90deg,
+      #C4622D 0px, #C4622D 8px,
+      #D4A843 8px, #D4A843 16px,
+      #4A7C59 16px, #4A7C59 24px,
+      #1E2D1A 24px, #1E2D1A 32px
+    );
+  }
+  .font-serif {
+    font-family: "DM Serif Display", Georgia, serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}

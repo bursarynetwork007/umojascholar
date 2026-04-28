@@ -157,7 +157,7 @@ export default function PrivacyPage() {
         <div className="flex justify-center gap-6 text-xs text-cream/40">
           <Link href="/" className="hover:text-cream/70 transition-colors">Home</Link>
           <Link href="/terms" className="hover:text-cream/70 transition-colors">Terms of Use</Link>
-          <a href="mailto:privacy@umojascholars.com" className="hover:text-cream/70 transition-colors">Contact</a>
+          <Link href="/contact" className="hover:text-cream/70 transition-colors">Contact</Link>
         </div>
         <p className="text-cream/30 text-xs mt-3">© 2026 UmojaScholar</p>
       </footer>

@@ -68,9 +68,12 @@ export default function LandingPage() {
           <Link href="/signup" className="flex items-center gap-2 bg-terra text-cream px-8 py-4 rounded-xl font-semibold text-base hover:bg-terra2 transition-all shadow-md hover:shadow-lg">
             Find my scholarships <ArrowRight size={18} />
           </Link>
-          <Link href="/signin" className="text-sm font-medium text-bark/60 hover:text-bark transition-colors">Already have an account? Sign in →</Link>
+          <Link href="/demo" className="flex items-center gap-2 bg-white border border-sand2 text-bark px-8 py-4 rounded-xl font-semibold text-base hover:bg-cream2 transition-all shadow-sm">
+            Try the demo first →
+          </Link>
         </div>
-        <p className="mt-5 text-xs text-bark/40">Free to use · No credit card required · 2 min to set up</p>
+        <p className="mt-4 text-xs text-bark/40">No account needed for the demo · Free to sign up</p>
+
 
         {/* Low-bandwidth callout */}
         <div className="mt-8 inline-flex items-center gap-2.5 bg-sage/10 border border-sage/25 rounded-xl px-4 py-2.5 text-sm text-bark/70">
@@ -175,7 +178,7 @@ export default function LandingPage() {
           <div className="flex gap-6 text-xs text-cream/40">
             <Link href="/privacy" className="hover:text-cream/70 transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-cream/70 transition-colors">Terms</Link>
-            <a href="mailto:hello@umojascholars.com" className="hover:text-cream/70 transition-colors">Contact</a>
+            <Link href="/contact" className="hover:text-cream/70 transition-colors">Contact</Link>
           </div>
         </div>
       </footer>

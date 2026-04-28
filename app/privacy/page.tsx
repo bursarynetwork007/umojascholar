@@ -130,7 +130,7 @@ export default function PrivacyPage() {
             <ul className="space-y-1 list-disc list-inside">
               <li>Access to the personal data we hold about you</li>
               <li>Correction of inaccurate data</li>
-              <li>Deletion of your data ("right to be forgotten")</li>
+              <li>Deletion of your data (&ldquo;right to be forgotten&rdquo;)</li>
               <li>Portability of your data in a machine-readable format</li>
               <li>Objection to processing</li>
             </ul>

@@ -1,16 +1,11 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        # Deploy Cognito User Pool via Amplify Gen 2
-        - npm ci --cache .npm --prefer-offline
-        - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
     preBuild:
       commands:
         - npm ci --cache .npm --prefer-offline
+        # Decode Cognito config injected as a secret env var — never committed to git
+        - echo "$AMPLIFY_OUTPUTS_B64" | base64 -d > amplify_outputs.json
     build:
       commands:
         - npm run build
@@ -23,9 +18,3 @@ frontend:
       - .next/cache/**/*
       - .npm/**/*
       - node_modules/**/*
-  environment:
-    variables:
-      NEXT_PUBLIC_SUPABASE_URL: $NEXT_PUBLIC_SUPABASE_URL
-      NEXT_PUBLIC_SUPABASE_ANON_KEY: $NEXT_PUBLIC_SUPABASE_ANON_KEY
-      # ANTHROPIC_API_KEY and SUPABASE_SERVICE_ROLE_KEY are set as
-      # secret environment variables in the Amplify Console — never committed.
